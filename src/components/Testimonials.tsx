@@ -86,7 +86,7 @@ export const Testimonials = () => {
 
   return (
     <div className="bg-gray-950 py-20">
-      <h2 className="text-4xl font-bold text-center text-[#BCFF40] mb-12">
+      <h2 className="text-4xl px-6 font-bold text-center text-[#BCFF40] mb-12">
         What Women Are Saying
       </h2>
 

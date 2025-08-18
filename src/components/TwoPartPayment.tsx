@@ -32,7 +32,7 @@ export const TwoPartPayment = () => {
   return (
     <div className="text-center my-12">
       {/* Trigger button */}
-            <h2 className="text-xl font-bold text-[#BCFF40] mb-4">Can't make a one time Payment?</h2>
+            <h2 className="text-xl font-bold text-[#BCFF40] mb-4">2 Part Payment For 75 Soft</h2>
       <button
         onClick={() => setShowStep1(true)}
         className="bg-[#BCFF40] text-black py-3 px-6 rounded-lg font-semibold hover:bg-lime-400 transition"

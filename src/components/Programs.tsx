@@ -29,7 +29,7 @@ export const Programs = () => {
       link: "https://selar.com/3r4373js67",
     },
     {
-      title: "Deeper 75 Soft",
+      title: "75 Soft",
       subtitle: "75-Day Fitness Faith & Accountability Challenge for Women 💚",
       intro: "If you’ve been struggling to stay committed, the 75 Soft Challenge will change everything. Build unshakable consistency through small, sustainable steps over 11 weeks.",
       benefits: [
@@ -73,6 +73,7 @@ export const Programs = () => {
             className="bg-gradient-to-b from-gray-900 to-black p-10 rounded-3xl shadow-xl border border-gray-700 relative"
           >
             {/* Title */}
+            <p className="text-sm text-left">Deeper 30</p>
             <h3 className="text-3xl font-bold text-[#BCFF40]">{p.title}</h3>
             <p className="mt-2 text-gray-300 italic">{p.subtitle}</p>
 
