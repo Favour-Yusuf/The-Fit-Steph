@@ -9,6 +9,7 @@ import { FAQ } from "./components/FAQ";
 import { Footer } from "./components/Footer";
 import { JoinSteps } from "./components/JoinSteps";
 import { AskQuestions } from "./components/AskQuestions";
+import { TwoPartPayment } from "./components/TwoPartPayment";
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
         <section id="founder"><Founder /></section>
         <section id="programs"><Programs /></section>
         <section id="joinsteps"><JoinSteps/></section>
+        <section id="joinsteps"><TwoPartPayment/></section>
         <section id="testimonials"><Testimonials /></section>
         <section id="askquestions"><AskQuestions /></section>
         <section id="faq"><FAQ /></section>
