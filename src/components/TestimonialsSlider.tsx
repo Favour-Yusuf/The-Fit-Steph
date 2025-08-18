@@ -16,14 +16,14 @@ const testimonials = [
       I'm glad that I got to do this everyday with you. You are Godsent!
       Now, let me lock in and take the 6kg I've lost so far to 12kg by the
       grace of God and by showing up everyday, under your guidance.”`,
-    author: "— Favour O.",
-  },
+    author: "— Iy",
+  }, 
 ]
 
 export const TestimonialsSlider = () => {
   const [emblaRef] = useEmblaCarousel(
     { loop: true, align: "start" },
-    [Autoplay({ delay: 5000, stopOnInteraction: false })] // 5s per slide
+    [Autoplay({ delay: 4000, stopOnInteraction: false })] // 5s per slide
   )
 
   return (

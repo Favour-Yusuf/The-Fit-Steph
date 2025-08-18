@@ -6,7 +6,7 @@ export const JoinSteps = () => {
     name: "",
     phone: "",
     email: "",
-    package: "30 Days Challenge",
+    package: "Select Package",
   })
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
@@ -16,7 +16,7 @@ export const JoinSteps = () => {
 
   const handleConfirm = () => {
     const whatsappNumber = "2347033408291" // replace with YOUR WhatsApp number
-    const message = `Hello, I have made a payment and would like to confirm.\n\nName: ${form.name}\nPhone: ${form.phone}\nEmail: ${form.email}\nPackage: ${form.package}`
+    const message = `Hello, I have made a payment for ${form.package} and would like you to confirm.\n\nName: ${form.name}\nPhone: ${form.phone}\nEmail: ${form.email}\nPackage: ${form.package}`
     const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`
     window.open(url, "_blank")
     setIsOpen(false)

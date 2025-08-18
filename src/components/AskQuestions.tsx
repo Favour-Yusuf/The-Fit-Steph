@@ -14,7 +14,7 @@ export const AskQuestions = () => {
 
   const handleSend = () => {
     const whatsappNumber = "2347033408291" // 🔥 Replace with YOUR WhatsApp number
-    const message = `Hello, I’d like to make some enquiries.\n\nName: ${form.name}\nPhone: ${form.phone}\nQuestions: ${form.question}`
+    const message = `Hello, I would like to make some enquiries.\n\nName: ${form.name}\nPhone: ${form.phone}\nQuestions: ${form.question}`
     const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`
     window.open(url, "_blank")
   }
@@ -43,7 +43,7 @@ export const AskQuestions = () => {
         />
         <textarea
           name="question"
-          placeholder="Type your question here..."
+          placeholder="Type your question here... (eg: How can I lose 10kg in 2 minutes? 😂😂)"
           value={form.question}
           onChange={handleChange}
           rows={4}
