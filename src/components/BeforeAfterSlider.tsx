@@ -1,7 +1,7 @@
 // src/components/BeforeAfterSlider.tsx
 import useEmblaCarousel from "embla-carousel-react"
+import Autoplay from "embla-carousel-autoplay"
 import { useEffect, useState } from "react"
-import { ChevronLeft, ChevronRight } from "lucide-react"
 
 const images = [
   "/before-after-1.PNG",
@@ -11,15 +11,15 @@ const images = [
   "/before-after5.PNG",
   "/before-after6.PNG",
   "/before-after7.PNG",
-  // "/IMG_4375.PNG",
-  // "/IMG_4376.PNG",
 ]
 
 export const BeforeAfterSlider = () => {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true })
+  const [emblaRef, emblaApi] = useEmblaCarousel(
+    { loop: true },
+    [Autoplay({ delay: 3000, stopOnInteraction: false })] // 4s autoplay
+  )
   const [selectedIndex, setSelectedIndex] = useState(0)
 
-  // Update active slide
   useEffect(() => {
     if (!emblaApi) return
     const onSelect = () => setSelectedIndex(emblaApi.selectedScrollSnap())
@@ -44,28 +44,13 @@ export const BeforeAfterSlider = () => {
         </div>
       </div>
 
-      {/* Navigation Buttons */}
-      <button
-        onClick={() => emblaApi?.scrollPrev()}
-        className="absolute top-1/2 left-3 -translate-y-1/2 bg-gray-900/70 p-2 rounded-full hover:bg-gray-800"
-      >
-        <ChevronLeft className="w-6 h-6 text-white" />
-      </button>
-
-      <button
-        onClick={() => emblaApi?.scrollNext()}
-        className="absolute top-1/2 right-3 -translate-y-1/2 bg-gray-900/70 p-2 rounded-full hover:bg-gray-800"
-      >
-        <ChevronRight className="w-6 h-6 text-white" />
-      </button>
-
       {/* Dots */}
       <div className="flex justify-center gap-2 mt-4">
         {images.map((_, i) => (
           <button
             key={i}
             onClick={() => emblaApi?.scrollTo(i)}
-            className={`w-3 h-3 rounded-full ${
+            className={`w-3 h-3 rounded-full transition-colors ${
               i === selectedIndex ? "bg-[#BCFF40]" : "bg-gray-500"
             }`}
           />

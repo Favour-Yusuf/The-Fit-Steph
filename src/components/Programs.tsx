@@ -112,7 +112,7 @@ export const Programs = () => {
             >
               {p.cta}
             </a>
-            <p className="mt-3 text-sm text-gray-400 text-center">⚡ Limited slots available</p>
+            <p className="mt-3 text-sm text-gray-400 text-center">⚡ 5 slots available</p>
           </motion.div>
         ))}
       </div>
