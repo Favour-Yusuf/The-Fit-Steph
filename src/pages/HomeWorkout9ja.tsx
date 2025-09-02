@@ -13,7 +13,7 @@ export default function HomeWorkout9jaStepper() {
 
   const handleCopyDetails = () => {
     navigator.clipboard.writeText(
-      "Account Name: Stephanie Okechukwu\nBank: Kuda bank\nAccount Number: 1101162804"
+      "Account Name: Stephanie Okechukwu\nBank:Opay\nAccount Number:70334028291"
     )
     alert("Account details copied!")
   }
@@ -104,10 +104,10 @@ I would like you to confirm my payment. Receipt attached.`
                 <strong>Account Name:</strong> Stephanie Okechukwu
               </p>
               <p className="text-gray-300">
-                <strong>Bank:</strong> Kuda bank
+                <strong>Bank:</strong> Opay
               </p>
               <p className="text-gray-300">
-                <strong>Account Number:</strong> 1101162804
+                <strong>Account Number:</strong> 70334028291 
               </p>
               <button
                 onClick={handleCopyDetails}
