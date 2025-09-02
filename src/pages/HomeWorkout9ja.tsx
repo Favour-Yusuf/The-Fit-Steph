@@ -101,13 +101,13 @@ I would like you to confirm my payment. Receipt attached.`
             </p>
             <div className="bg-black/40 p-4 rounded-lg border border-gray-700 text-left">
               <p className="text-gray-300">
-                <strong>Account Name:</strong> TheFitSteph Global
+                <strong>Account Name:</strong> Stephanie Okechukwu
               </p>
               <p className="text-gray-300">
-                <strong>Bank:</strong> Access Bank
+                <strong>Bank:</strong> Kuda bank
               </p>
               <p className="text-gray-300">
-                <strong>Account Number:</strong> 0123456789
+                <strong>Account Number:</strong> 1101162804
               </p>
               <button
                 onClick={handleCopyDetails}
