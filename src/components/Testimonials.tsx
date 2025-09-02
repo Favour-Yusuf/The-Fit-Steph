@@ -19,7 +19,10 @@ const ExpandableTestimonial = ({
   const [expanded, setExpanded] = useState(false);
 
   return (
+
+    
     <div className="bg-gray-900 p-6 rounded-2xl border border-gray-700 shadow-lg">
+      
       <h4 className="text-[#BCFF40] font-bold mb-4">{name}</h4>
       <div className="space-y-4 text-gray-300">
         {paragraphs.slice(0, expanded ? paragraphs.length : 2).map((p, i) => (
@@ -82,6 +85,18 @@ export const Testimonials = () => {
         // add rest of her story...
       ],
     },
+    {
+      name: "Hannah",
+      program: "Deeper 30",
+      paragraphs: [
+        "My honest review of August’s Deeper 30. I am actually glad I did this.",
+        "Yesterday, one of my team mate said “Hannah your food nowadays is massive”. I was eating walnut. Who eats walnut. People close to me would ask if I’m to eat this or that cause they see I’m now intentional about everything. But that’s how refined I’m becoming. ",
+        "I used the toilet this morning and I did 10 squats. There and then I determined I’d do 10 squats anytime I use the restroom.This morning I noticed I hop comfortably and always when I used the bridge or office stair case, telling myself I need to be fit.",
+        "I now stay conscious of what I eat, consume more fruits and water, though I still default occasionally with spaghetti and eating till I’m full. Recently I see ladies with curvy bodies and bumbum and I’m like, great. God when. But I also understand it’s possible for me and that I’m good and loved as I am. ",
+        "How did I get here? Through Deeper 30. I have come to understand how important my body, health, spirit, energy and soul is to God. God wants me wholesome, agile and well grounded. And I can make that happen with His help. I’m amazed how you keep track of every member. Checking up and also respectfully holding us accountable. You even used the term “clients” for us on your status and I love how you value everyone. ",
+        "I’m grateful for your prayers today. And how you show up for us. It’s beyond money, cause how much is it. This era is to a better me and that dream started when I got in to Deeper 30. Not easy but I’m doing well.",
+      ],
+    },
   ];
 
   return (
@@ -89,6 +104,15 @@ export const Testimonials = () => {
       <h2 className="text-4xl px-6 font-bold text-center text-[#BCFF40] mb-12">
         What Women Are Saying
       </h2>
+
+
+      {/* ✅ Before & After Slider */}
+      <div className="max-w-6xl mx-auto px-6 mb-16">
+        <h3 className="text-2xl font-bold text-[#BCFF40] mb-6 text-center">
+          Transformations
+        </h3>
+        <BeforeAfterSlider />
+      </div>
 
       {/* ✅ Short Testimonials Grid */}
       <TestimonialsSlider/>
@@ -101,13 +125,7 @@ export const Testimonials = () => {
         ))}
       </div>
 
-      {/* ✅ Before & After Gallery */}
-      <div className="max-w-6xl mx-auto px-6 mb-16">
-        <h3 className="text-2xl font-bold text-[#BCFF40] mb-6 text-center">
-          Transformations
-        </h3>
-        <BeforeAfterSlider />
-      </div>
+      
 
       {/* ✅ Video Testimonials */}
 
