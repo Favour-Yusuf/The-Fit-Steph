@@ -22,7 +22,7 @@ export const Programs = () => {
         "⏳ Busy women who need structure and accountability",
         "🙏 Women who want to combine faith, fitness, and discipline",
       ],
-      start: "September 8",
+      start: "Not Fixed",
       fee: "₦25,000",
       location: "Online | Women Only",
       cta: "🚀 Secure Your Spot",
