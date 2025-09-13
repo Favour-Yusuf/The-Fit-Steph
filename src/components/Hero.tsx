@@ -33,7 +33,7 @@ export const Hero = () => {
 
         {/* Social proof line */}
         <p className="mt-4 text-sm text-gray-400">
-          💃 Trusted by 200+ Christian women worldwide
+          💃 Trusted by 2000+ Christian women worldwide
         </p>
 
         <div className="mt-8 flex flex-wrap gap-4 justify-center">
