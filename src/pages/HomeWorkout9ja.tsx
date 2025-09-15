@@ -13,7 +13,7 @@ export default function HomeWorkout9jaStepper() {
 
   const handleCopyDetails = () => {
     navigator.clipboard.writeText(
-      "Account Name: Stephanie Okechukwu\nBank:Opay\nAccount Number:70334028291"
+      "Account Name: Stephanie Okechukwu\nBank:Opay\nAccount Number:7033408291"
     )
     alert("Account details copied!")
   }
@@ -79,7 +79,7 @@ I would like you to confirm my payment. Receipt attached.`
           className="w-full"
           onPlay={handleAudioPlay}
         >
-          <source src="/audio/Homework9ja.m4a" type="audio/mpeg" />
+          <source src="/audio/Homework9ja.mp3" type="audio/mpeg" />
           Your browser does not support the audio element.
         </audio>
       </div>
@@ -107,7 +107,7 @@ I would like you to confirm my payment. Receipt attached.`
                 <strong>Bank:</strong> Opay
               </p>
               <p className="text-gray-300">
-                <strong>Account Number:</strong> 70334028291 
+                <strong>Account Number:</strong> 7033408291 
               </p>
               <button
                 onClick={handleCopyDetails}
