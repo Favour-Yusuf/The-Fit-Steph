@@ -37,9 +37,12 @@ I would like you to confirm my payment. Receipt attached.`
         Join <span className="text-[#BCFF40]">HomeWorkout9ja</span>
       </h1>
       <p className="text-gray-400 max-w-lg mx-auto">
-        Follow these 3 simple steps to secure your spot. Sow a minimum of{" "}
-        <span className="text-[#BCFF40] font-semibold">₦3,500</span> — or more
-        if you value what you’ll receive. 💪
+        Follow these 3 simple steps to sign up ✨ {" "} <br />
+Your fitness journey starts here;  build strength, stay consistent, and enjoy the support of a committed community. 💪
+<br />
+This is a pay-what-you-like plan, with a minimum of 
+{" "}
+        <span className="text-[#BCFF40] font-semibold">₦3,500</span> to secure your spot. Anything more? Na bonus love. 💚
       </p>
 
       {/* --- Stepper Header --- */}
