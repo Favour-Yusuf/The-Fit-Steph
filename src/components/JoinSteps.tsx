@@ -27,7 +27,7 @@ export const JoinSteps = () => {
       <h2 className="text-2xl font-bold mb-6 text-[#BCFF40]">How to Join</h2>
 
       <ol className="text-gray-300 space-y-4 text-left max-w-lg mx-auto">
-        <li>1️⃣ Choose your package (30 Days Challenge or 75 Soft).</li>
+        {/* <li>1️⃣ Choose your package (30 Days Challenge or 75 Soft).</li> */}
         <li>2️⃣ Pay securely via <a href="https://selar.com/m/ThefitSteph" target="_blank" rel="noopener noreferrer" className="text-[#BCFF40] underline">Selar</a>.</li>
         <li>3️⃣ Come back here and click the button below to confirm your payment.</li>
       </ol>
