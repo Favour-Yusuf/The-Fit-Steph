@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export const Hero = () => {
   return (
-    <div className="relative h-screen flex flex-col justify-center items-center text-center px-6 bg-gradient-to-b from-black via-black to-gray-900 overflow-hidden">
+    <div className="relative h-[80vh] flex flex-col justify-center items-center text-center px-6 bg-gradient-to-b from-black via-black to-gray-900 overflow-hidden">
       {/* Background image (replace with founder photo / vector / pattern) */}
       <div className="absolute inset-0">
         <img
@@ -36,12 +36,12 @@ export const Hero = () => {
           💃 Trusted by 2000+ Christian women worldwide
         </p>
 
-        <div className="mt-8 flex flex-wrap gap-4 justify-center">
+        <div className="mt-8 flex flex-wrap justify-center">
           <a
             href="#programs"
             className="px-8 py-4 bg-[#BCFF40] text-black font-bold rounded-full shadow-lg hover:bg-lime-400 transition"
           >
-            🚀 Join Deeper30
+            🚀 Join Deeper30 for ₦25,000 Monthly
           </a>
         </div>
       </motion.div>
