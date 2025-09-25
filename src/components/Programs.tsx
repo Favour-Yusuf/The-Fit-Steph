@@ -22,7 +22,7 @@ export const Programs = () => {
         "⏳ Busy women who need structure and accountability",
         "🙏 Women who want to combine faith, fitness, and discipline",
       ],
-      start: "Not Fixed",
+      start: "Monthly Challenge",
       fee: "₦25,000",
       location: "Online | Women Only",
       cta: "🚀 Secure Your Spot",
@@ -58,9 +58,9 @@ export const Programs = () => {
 
   return (
     <div className="max-w-7xl mx-auto px-6 py-24">
-      <h2 className="text-4xl font-bold text-center text-[#BCFF40] mb-16">
+      {/* <h2 className="text-4xl font-bold text-center text-[#BCFF40] mb-16">
         Pick Your Transformation Journey
-      </h2>
+      </h2> */}
 
       <div className="grid md:grid-cols-2 gap-12">
         {programData.map((p, i) => (
@@ -76,6 +76,14 @@ export const Programs = () => {
             <p className="text-sm text-left">Deeper 30</p>
             <h3 className="text-3xl font-bold text-[#BCFF40]">{p.title}</h3>
             <p className="mt-2 text-gray-300 italic">{p.subtitle}</p>
+
+
+             <div className="mt-8 p-4 rounded-xl bg-gray-800/70 border border-gray-700 text-gray-200">
+              <p>📅 <b>{p.start}</b></p>
+              <p>💰 Fee: <b>{p.fee}</b></p>
+              <p>🌍 {p.location}</p>
+              <p className="mt-3 text-sm text-gray-400 text-center">⚡ 5 slots available</p>
+            </div>
 
             {/* Intro */}
             <p className="mt-6 text-gray-300">{p.intro}</p>
@@ -100,11 +108,7 @@ export const Programs = () => {
             </ul>
 
             {/* Footer Info */}
-            <div className="mt-8 p-4 rounded-xl bg-gray-800/70 border border-gray-700 text-gray-200">
-              <p>📅 Start Date: <b>{p.start}</b></p>
-              <p>💰 Fee: <b>{p.fee}</b></p>
-              <p>🌍 {p.location}</p>
-            </div>
+           
 
             {/* CTA */}
             <a
@@ -113,7 +117,7 @@ export const Programs = () => {
             >
               {p.cta}
             </a>
-            <p className="mt-3 text-sm text-gray-400 text-center">⚡ 5 slots available</p>
+            
           </motion.div>
         ))}
       </div>

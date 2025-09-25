@@ -36,13 +36,9 @@ I would like you to confirm my payment. Receipt attached.`
       <h1 className="text-3xl font-bold text-white">
         Join <span className="text-[#BCFF40]">HomeWorkout9ja</span>
       </h1>
-      <p className="text-gray-400 max-w-lg mx-auto">
+      <p className="text-gray-400 font-semibold text-xl max-w-lg mx-auto">
         Follow these 3 simple steps to sign up ✨ {" "} <br />
-Your fitness journey starts here;  build strength, stay consistent, and enjoy the support of a committed community. 💪
-<br />
-This is a pay-what-you-like plan, with a minimum of 
-{" "}
-        <span className="text-[#BCFF40] font-semibold">₦3,500</span> to secure your spot. Anything more? Na bonus love. 💚
+        Pay <span className="text-[#BCFF40] text-2xl font-semibold"> ₦3,500</span> to secure your spot. Anything more? Na bonus love. 💚
       </p>
 
       {/* --- Stepper Header --- */}
@@ -98,9 +94,9 @@ This is a pay-what-you-like plan, with a minimum of
         </h2>
         {step >= 2 ? (
           <div>
-            <p className="text-gray-400 mb-4">
+            <p className="text-gray-400 text-lg mb-4">
               Sow what you believe this is worth. Minimum is{" "}
-              <span className="text-[#BCFF40] font-bold">₦3,500</span>.
+              <span className="text-[#BCFF40] text-2xl font-bold">₦3,500</span>.
             </p>
             <div className="bg-black/40 p-4 rounded-lg border border-gray-700 text-left">
               <p className="text-gray-300">

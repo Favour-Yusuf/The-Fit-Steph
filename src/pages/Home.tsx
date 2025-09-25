@@ -16,8 +16,9 @@ export default function Home() {
       <Navbar />
       <main>
         <section id="home"><Hero /></section>
-        <section id="testimonials"><Testimonials /></section>
         <section id="programs"><Programs /></section>
+
+        <section id="testimonials"><Testimonials /></section>
         <section id="joinsteps"><JoinSteps/></section>
         {/* <section id="joinsteps"><TwoPartPayment/></section> */}
         <section id="founder"><Founder /></section>
