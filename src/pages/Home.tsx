@@ -6,6 +6,7 @@ import { Solution } from '../components/Solution'
 import { Results } from '../components/Results'
 import { WhatYouGet } from '../components/WhatYouGet'
 import { ForWho, VerseBreak, CountdownSection, Pricing, Footer } from '../components/Sections'
+import { Testimonials } from '../components/Testimonials'
 
 export default function App() {
   return (
@@ -21,6 +22,7 @@ export default function App() {
       <VerseBreak />
       <CountdownSection />
       <Pricing />
+      <Testimonials />
       <Footer />
     </>
   )
