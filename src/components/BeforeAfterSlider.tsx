@@ -11,6 +11,9 @@ const images = [
   "/before-after5.PNG",
   "/before-after6.PNG",
   "/before-after7.PNG",
+  "/before-after8.HEIC",
+  "/before-after9.jpeg",
+  "/before-after10.jpeg",
 ]
 
 export const BeforeAfterSlider = () => {

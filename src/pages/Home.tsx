@@ -1,32 +1,27 @@
-import { Navbar } from "../components/Navbar";
-import { Hero } from "../components/Hero";
-import { Founder } from "../components/Founder";
-import { Programs } from "../components/Programs";
-import { Testimonials } from "../components/Testimonials";
-import { FAQ } from "../components/FAQ";
-// import { Countdown } from "../components/Countdown";
-import { Footer } from "../components/Footer";
-import { JoinSteps } from "../components/JoinSteps";
-import { AskQuestions } from "../components/AskQuestions";
-// import { TwoPartPayment } from "../components/TwoPartPayment";
+import { UrgencyBar } from '../components/UrgencyBar'
+import { Hero } from '../components/Hero'
+import { ResultStrip } from '../components/ResultStrip'
+import { Problem } from '../components/Problem'
+import { Solution } from '../components/Solution'
+import { Results } from '../components/Results'
+import { WhatYouGet } from '../components/WhatYouGet'
+import { ForWho, VerseBreak, CountdownSection, Pricing, Footer } from '../components/Sections'
 
-export default function Home() {
+export default function App() {
   return (
-    <div className="bg-black text-white font-sans">
-      <Navbar />
-      <main>
-        <section id="home"><Hero /></section>
-        <section id="programs"><Programs /></section>
-
-        <section id="testimonials"><Testimonials /></section>
-        <section id="joinsteps"><JoinSteps/></section>
-        {/* <section id="joinsteps"><TwoPartPayment/></section> */}
-        <section id="founder"><Founder /></section>
-        <section id="askquestions"><AskQuestions /></section>
-        <section id="faq"><FAQ /></section>
-        {/* <section id="countdown"><Countdown /></section> */}
-      </main>
+    <>
+      <UrgencyBar />
+      <Hero />
+      <ResultStrip />
+      <Problem />
+      <Solution />
+      <Results />
+      <WhatYouGet />
+      <ForWho />
+      <VerseBreak />
+      <CountdownSection />
+      <Pricing />
       <Footer />
-    </div>
-  );
+    </>
+  )
 }

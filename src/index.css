@@ -1,1 +1,53 @@
 @import "tailwindcss";
+
+
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background-color: #FDF6EE;
+    color: #1A1A1A;
+    overflow-x: hidden;
+  }
+}
+
+@layer utilities {
+  .hero-gradient::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 70% 30%, rgba(201,144,58,0.18) 0%, transparent 60%),
+      radial-gradient(ellipse at 20% 80%, rgba(45,90,61,0.6) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  .scroll-line::after {
+    content: '';
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.3), transparent);
+    animation: scrollPulse 2s infinite;
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .price-original {
+    text-decoration: line-through;
+    text-decoration-color: rgba(255, 100, 100, 0.6);
+    text-decoration-thickness: 2px;
+  }
+}
