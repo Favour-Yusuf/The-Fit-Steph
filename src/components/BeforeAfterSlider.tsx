@@ -6,11 +6,9 @@ import { useEffect, useState } from "react"
 const images = [
   "/before-after-1.PNG",
   "/before-after2.PNG",
-  "/before-after3.PNG",
   "/before-after4.PNG",
   "/before-after5.PNG",
   "/before-after6.PNG",
-  "/before-after7.PNG",
   "/before-after8.HEIC",
   "/before-after9.jpeg",
   "/before-after10.jpeg",
