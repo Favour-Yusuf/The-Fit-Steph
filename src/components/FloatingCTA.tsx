@@ -6,11 +6,7 @@ export default function FloatingCTA() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 500) {
-        setVisible(true)
-      } else {
-        setVisible(false)
-      }
+      setVisible(window.scrollY > 500)
     }
 
     window.addEventListener("scroll", handleScroll)
@@ -19,29 +15,55 @@ export default function FloatingCTA() {
 
   const scrollToPricing = () => {
     const el = document.getElementById("pricing")
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth" })
-    }
+    if (el) el.scrollIntoView({ behavior: "smooth" })
   }
 
   return (
     <div
-      className={`fixed bottom-4 left-1/2 -translate-x-1/2 z-50 px-4 transition-all duration-500 ${
-        visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6 pointer-events-none"
+      className={`fixed bottom-6 right-5 z-50 transition-all duration-500 ${
+        visible
+          ? "opacity-100 translate-y-0"
+          : "opacity-0 translate-y-6 pointer-events-none"
       }`}
     >
       <button
         onClick={scrollToPricing}
-        className="flex items-center gap-2 px-6 py-4 rounded-full text-white font-semibold text-sm"
+        className="group relative flex items-center gap-2 px-4 py-3 rounded-full text-white text-[0.78rem] font-medium overflow-hidden"
         style={{
-          background: "#C9903A",
-          boxShadow: "0 10px 40px rgba(201,144,58,0.45)",
+          background: "rgba(201,144,58,0.95)",
+          boxShadow: "0 6px 24px rgba(201,144,58,0.35)",
           backdropFilter: "blur(6px)",
+          letterSpacing: "0.03em",
         }}
       >
-        <FiLock size={14} />
-        Secure your spot now →
+        {/* subtle shimmer flicker */}
+        <span
+          className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-700"
+          style={{
+            background:
+              "linear-gradient(120deg, transparent 30%, rgba(255,255,255,0.25) 50%, transparent 70%)",
+            animation: "shimmer 2.5s infinite",
+          }}
+        />
+
+        {/* icon */}
+        <FiLock size={13} className="opacity-90" />
+
+        {/* text */}
+        <span className="relative">
+          Secure your spot →
+        </span>
       </button>
+
+      {/* shimmer animation */}
+      <style>
+        {`
+          @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+          }
+        `}
+      </style>
     </div>
   )
 }
