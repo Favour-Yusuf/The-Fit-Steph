@@ -6,6 +6,15 @@ import { HiOutlineSparkles } from 'react-icons/hi'
 import { TbStarFilled } from 'react-icons/tb'
 import { BsLightningChargeFill } from 'react-icons/bs'
 import { IoWarningOutline } from 'react-icons/io5'
+// import { useState } from "react"
+// import SuccessModal from "./SuccessModal"
+// import emailjs from "emailjs-com"
+import { GiWeightLiftingUp } from "react-icons/gi"
+import { FiSmartphone } from "react-icons/fi"
+// import {  } from "react-icons/hi"
+import { TbCrown } from "react-icons/tb"
+import { MdPublic } from "react-icons/md"
+
 
 const SELAR_LINK = 'https://selar.com/3r4373js67'
 const TOTAL_SLOTS = 5
@@ -249,12 +258,12 @@ export function CountdownSection() {
 
 // ─── PRICING ────────────────────────────────────────────────────
 const includes = [
-  { icon: '🏋🏾‍♀️', text: 'Live virtual workout sessions'    },
-  { icon: '📲',    text: 'Daily accountability check-ins'   },
-  { icon: '🙏🏾',  text: 'Faith-led community access'       },
-  { icon: '👑',    text: 'Personal coaching from Steph'     },
-  { icon: '🌍',    text: 'Global access — join from anywhere'},
-  { icon: '🔒',    text: 'Women-only safe space'            },
+  { icon: <GiWeightLiftingUp size={18} />, text: 'Live virtual workout sessions' },
+  { icon: <FiSmartphone size={18} />, text: 'Daily accountability check-ins' },
+  { icon: <HiOutlineSparkles size={18} />, text: 'Faith-led community access' },
+  { icon: <TbCrown size={18} />, text: 'Personal coaching from Steph' },
+  { icon: <MdPublic size={18} />, text: 'Global access — join from anywhere' },
+  { icon: <FiLock size={18} />, text: 'Women-only safe space' },
 ]
 
 export function Pricing() {
@@ -262,6 +271,58 @@ export function Pricing() {
   const h2LeftRef  = useReveal()
   const h2RightRef = useReveal()
   const boxRef     = useReveal()
+//   const [email, setEmail] = useState("")
+// const [isPaying, setIsPaying] = useState(false)
+// const isValidEmail = email.includes("@")
+// const [showSuccess, setShowSuccess] = useState(false)
+
+// const handlePayment = () => {
+//   if (!email) return
+
+//   setIsPaying(true)
+
+//   const handler = (window as any).PaystackPop.setup({
+//     key: import.meta.env.VITE_PAYSTACK_PUBLIC_KEY,
+//     email,
+//     amount: 2500000, // ₦25,000 in kobo
+//     currency: "NGN",
+//     ref: "" + new Date().getTime(),
+
+//     callback: function (response: any) {
+//   setIsPaying(false)
+
+//   // Save payment locally
+//   localStorage.setItem(
+//     "lastPayment",
+//     JSON.stringify({
+//       email,
+//       reference: response.reference,
+//       date: new Date(),
+//     })
+//   )
+
+//   // ✅ Send email
+//   emailjs.send(
+//     import.meta.env.VITE_EMAILJS_SERVICE_ID,
+//     import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+//     {
+//       user_email: email,
+//     },
+//     import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+//   )
+
+//   // ✅ Show luxury modal
+//   setShowSuccess(true)
+// },
+
+//     onClose: function () {
+//       setIsPaying(false)
+//       console.log("Payment closed")
+//     },
+//   })
+
+//   handler.openIframe()
+// }
 
   return (
     <section className="relative px-6 py-24 overflow-hidden" style={{ background: '#FDF6EE' }}>
@@ -329,20 +390,39 @@ export function Pricing() {
           <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3.5 mb-10">
             {includes.map((item) => (
               <li key={item.text} className="flex items-center gap-2.5 text-[0.87rem]" style={{ color: 'rgba(255,255,255,0.68)' }}>
-                <span className="text-base leading-none">{item.icon}</span>
+                <span className="text-[#E8B86D]">{item.icon}</span>
                 {item.text}
               </li>
             ))}
           </ul>
-
+            {/* <input
+  type="email"
+  placeholder="Enter your email"
+  value={email}
+  onChange={(e) => setEmail(e.target.value)}
+  className="w-full mb-4 px-4 py-4 rounded-xl text-sm outline-none"
+  style={{
+    background: 'rgba(255,255,255,0.06)',
+    border: '1px solid rgba(201,144,58,0.25)',
+    color: '#fff'
+  }}
+/> */}
           {/* CTA with shimmer */}
-          <a href={SELAR_LINK} target="_blank" rel="noreferrer"
-            className="group relative block text-center text-white font-bold text-[1.05rem] py-5 px-10 rounded-full transition-all duration-200 hover:-translate-y-0.5 overflow-hidden"
-            style={{ background: '#C9903A', boxShadow: '0 8px 36px rgba(201,144,58,0.45)', letterSpacing: '0.01em' }}>
-            <span className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
-              style={{ background: 'linear-gradient(105deg, transparent 30%, rgba(255,255,255,0.14) 50%, transparent 70%)' }} />
-            <span className="relative">I'm Ready — Join Now →</span>
-          </a>
+         {/* <button
+  onClick={handlePayment}
+    disabled={!isValidEmail || isPaying}
+  className="group relative block w-full text-center text-white font-bold text-[1.05rem] py-5 px-10 rounded-full transition-all duration-200 hover:-translate-y-0.5 overflow-hidden"
+  style={{
+    background: !isValidEmail ? '#888' : '#C9903A',
+    boxShadow: '0 8px 36px rgba(201,144,58,0.45)',
+    letterSpacing: '0.01em',
+    cursor: !email ? 'not-allowed' : 'pointer'
+  }}
+>
+  {isPaying ? "Processing..." : "I'm Ready — Join Now →"}
+</button> */}
+
+<a href={SELAR_LINK} target="_blank" rel="noreferrer" className="group relative block text-center text-white font-bold text-[1.05rem] py-5 px-10 rounded-full transition-all duration-200 hover:-translate-y-0.5 overflow-hidden" style={{ background: '#C9903A', boxShadow: '0 8px 36px rgba(201,144,58,0.45)', letterSpacing: '0.01em' }}> <span className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" style={{ background: 'linear-gradient(105deg, transparent 30%, rgba(255,255,255,0.14) 50%, transparent 70%)' }} /> <span className="relative">I'm Ready — Join Now →</span> </a>
 
           <p className="flex items-center justify-center gap-2 text-[0.76rem] mt-5" style={{ color: 'rgba(255,255,255,0.3)' }}>
             <FiLock size={11} />
@@ -350,9 +430,20 @@ export function Pricing() {
           </p>
         </div>
       </div>
+      {/* {showSuccess && (
+  <SuccessModal
+    email={email}
+    onClose={() => setShowSuccess(false)}
+  />
+)} */}
     </section>
+
+    
   )
+  
 }
+
+
 
 // ─── FOOTER ─────────────────────────────────────────────────────
 export function Footer() {
