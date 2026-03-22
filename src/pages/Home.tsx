@@ -7,6 +7,7 @@ import { Results } from '../components/Results'
 import { WhatYouGet } from '../components/WhatYouGet'
 import { ForWho, VerseBreak, CountdownSection, Pricing, Footer } from '../components/Sections'
 import { Testimonials } from '../components/Testimonials'
+import FloatingCTA from '../components/FloatingCTA'
 
 export default function App() {
   return (
@@ -21,9 +22,21 @@ export default function App() {
       <ForWho />
       <VerseBreak />
       <CountdownSection />
-      <Pricing />
+
+      {/* ✅ PRICING SECTION WITH ID */}
+      <section
+        id="pricing"
+        className="relative px-6 py-24 overflow-hidden"
+        style={{ background: '#FDF6EE' }}
+      >
+        <Pricing />
+      </section>
+
       <Testimonials />
       <Footer />
+
+      {/* ✅ FLOATING CTA (always visible) */}
+      <FloatingCTA />
     </>
   )
 }
