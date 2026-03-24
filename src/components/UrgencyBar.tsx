@@ -7,7 +7,7 @@ const TOTAL_SLOTS = 5
 const LEFT_SLOTS = TOTAL_SLOTS - TAKEN_SLOTS
 
 export function UrgencyBar() {
-  const { totalHours, mins, secs } = useCountdown()
+  const {days, hours, mins, secs } = useCountdown()
 
   return (
     <div className="sticky top-0 z-50 bg-[#1A1A1A] border-b border-white/5 flex items-center justify-center gap-3 flex-wrap px-5 py-3 text-sm font-medium text-white">
@@ -20,7 +20,12 @@ export function UrgencyBar() {
 
       {/* Countdown boxes */}
       <div className="flex items-center gap-1.5">
-        {[`${fmt(totalHours)}H`, `${fmt(mins)}M`, `${fmt(secs)}S`].map((unit) => (
+        {[
+  `${fmt(days)}D`,
+  `${fmt(hours)}H`,
+  `${fmt(mins)}M`,
+  `${fmt(secs)}S`,
+].map((unit) => (
           <span
             key={unit}
             className="bg-white/10 border border-white/10 rounded-md px-2.5 py-1 font-bold text-[#E8B86D] font-display text-sm min-w-[42px] text-center"
