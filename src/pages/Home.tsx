@@ -8,6 +8,7 @@ import { WhatYouGet } from '../components/WhatYouGet'
 import { ForWho, VerseBreak, CountdownSection, Pricing, Footer } from '../components/Sections'
 import { Testimonials } from '../components/Testimonials'
 import FloatingCTA from '../components/FloatingCTA'
+import { HeroTestimonial } from '../components/HeroTestimonial'
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
       <UrgencyBar />
       <Hero />
       <ResultStrip />
+      <HeroTestimonial/>
       <Problem />
       <Solution />
       <Results />
